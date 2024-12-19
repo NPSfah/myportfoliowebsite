@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #F9F9F9;
+    color: #2D3748;
+}
+
+header {
+    background: #4FD1C5;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header nav h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFE066;
+}
+
+section {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+/* About Section */
+#about {
+    border-left: 5px solid #FF7E79;
+}
+
+#about h2 {
+    color: #4FD1C5;
+}
+
+/* Projects Section */
+#projects {
+    border-left: 5px solid #4FD1C5;
+}
+
+.project {
+    background: #F9F9F9;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #4FD1C5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.project:hover {
+    background: #FFE066;
+    transform: translateY(-2px);
+}
+
+.project-details {
+    display: none;
+    margin-top: 0.5rem;
+    color: #2D3748;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+.project-details.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+    color: #2D3748;
+}
+
+form input,
+form textarea {
+    padding: 0.8rem;
+    border: 1px solid #4FD1C5;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #F9F9F9;
+    color: #2D3748;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #FF7E79;
+    background: #fff;
+}
+
+form button {
+    padding: 0.8rem;
+    background: #FF7E79;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #4FD1C5;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #4FD1C5;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

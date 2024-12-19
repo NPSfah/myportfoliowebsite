@@ -58,20 +58,29 @@ section {
     background: #fff;
 }
 
-/* About Section */
+h2 {
+    margin-bottom: 1rem;
+    color: #4FD1C5;
+}
+
+/* Specific Section Borders */
 #about {
     border-left: 5px solid #FF7E79;
 }
 
-#about h2 {
-    color: #4FD1C5;
-}
-
-/* Projects Section */
-#projects {
+#achievements {
     border-left: 5px solid #4FD1C5;
 }
 
+#projects {
+    border-left: 5px solid #FFE066;
+}
+
+#extracurricular {
+    border-left: 5px solid #FFA0D8;
+}
+
+/* Project Styling */
 .project {
     background: #F9F9F9;
     margin-bottom: 1rem;
@@ -98,66 +107,6 @@ section {
 .project-details.visible {
     display: block;
     opacity: 1;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-form label {
-    font-weight: bold;
-    color: #2D3748;
-}
-
-form input,
-form textarea {
-    padding: 0.8rem;
-    border: 1px solid #4FD1C5;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: #F9F9F9;
-    color: #2D3748;
-}
-
-form input:focus,
-form textarea:focus {
-    outline: none;
-    border-color: #FF7E79;
-    background: #fff;
-}
-
-form button {
-    padding: 0.8rem;
-    background: #FF7E79;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-form button:hover {
-    background: #4FD1C5;
-    transform: translateY(-2px);
-}
-
-/* Footer */
-footer {
-    background: #4FD1C5;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
 }
 
 /* Cursor Trail */

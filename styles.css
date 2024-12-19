@@ -49,6 +49,33 @@ header nav ul li a:hover {
     color: #FFE066;
 }
 
+/* About Section */
+#about {
+    border-left: 5px solid #FF7E79;
+    padding: 1rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4FD1C5;
+}
+
+.about-container p {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* General Section Styling */
 section {
     padding: 2rem 1rem;
     max-width: 800px;
@@ -62,6 +89,8 @@ h2 {
     margin-bottom: 1rem;
     color: #4FD1C5;
 }
+
+/* Other sections continue here */
 
 /* Specific Section Borders */
 #about {

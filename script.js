@@ -1,3 +1,4 @@
+// Toggle project details visibility
 document.querySelectorAll('.project').forEach(project => {
     project.addEventListener('click', function () {
         const details = this.querySelector('.project-details');
@@ -10,7 +11,6 @@ document.querySelectorAll('.project').forEach(project => {
 });
 
 // Cursor trail effect
-
 let lastTrailTime = 0;
 
 document.addEventListener('mousemove', function (e) {
@@ -54,4 +54,51 @@ document.addEventListener('mousemove', function (e) {
     setTimeout(() => {
         trail.remove();
     }, 1000); // Match the fade-out duration
+});
+
+// Function to handle scroll and check visibility of sections
+function handleScroll() {
+    const sections = document.querySelectorAll('.fade-section');
+    const windowHeight = window.innerHeight;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < windowHeight - 100) {
+            section.classList.add('visible');
+        } else {
+            section.classList.remove('visible');
+        }
+    });
+}
+
+// Add event listener for scroll
+window.addEventListener('scroll', handleScroll);
+
+// Trigger initial visibility check
+handleScroll();
+
+// Toggle navigation menu on mobile
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+
+    // Dynamically calculate and set the height for smooth expansion
+    if (navLinks.classList.contains('active')) {
+        navLinks.style.height = `${navLinks.scrollHeight}px`;
+    } else {
+        navLinks.style.height = '0';
+    }
+});
+
+// Ensure correct navigation menu state on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navLinks.style.height = 'auto'; // Reset height for larger screens
+        navLinks.classList.remove('active');
+    } else if (!navLinks.classList.contains('active')) {
+        navLinks.style.height = '0'; // Collapse for smaller screens
+    }
 });

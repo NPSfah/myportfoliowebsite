@@ -13,6 +13,8 @@ header {
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
 }
 
 header nav {
@@ -30,23 +32,37 @@ header nav h1 {
     color: #fff;
 }
 
-header nav ul {
+/* Navigation Links */
+.nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 1.5rem;
+    height: auto; /* Default for desktop */
+    overflow: hidden; /* Hide content when collapsed */
+    transition: height 0.3s ease, padding 0.3s ease;
 }
 
-header nav ul li a {
+.nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+.nav-links li a:hover {
     color: #FFE066;
+}
+
+/* Navigation Toggle Button */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* About Section */
@@ -59,6 +75,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .about-photo {
@@ -67,6 +84,7 @@ header nav ul li a:hover {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4FD1C5;
+    flex-shrink: 0;
 }
 
 .about-container p {
@@ -90,9 +108,7 @@ h2 {
     color: #4FD1C5;
 }
 
-/* Other sections continue here */
-
-/* Specific Section Borders */
+/* Section Borders */
 #about {
     border-left: 5px solid #FF7E79;
 }
@@ -138,6 +154,84 @@ h2 {
     opacity: 1;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        height: 0; /* Start collapsed */
+        padding: 0;
+        background: #4FD1C5;
+    }
+
+    .nav-links.active {
+        height: auto; /* Expands to fit content */
+        padding: 1rem 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Adjust header */
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    header nav h1 {
+        font-size: 1.8rem;
+    }
+
+    /* About section adjustments */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin: 0 auto;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+    }
+
+    /* Section styling adjustments */
+    section {
+        padding: 1.5rem 1rem;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-container p {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
 /* Cursor Trail */
 /* General Trail Styles */
 .trail {
@@ -148,39 +242,16 @@ h2 {
     transform-origin: center;
 }
 
-/* Four-Point Star */
 .trail.four-point {
-    clip-path: polygon(
-        50% 0%, 
-        65% 35%, 
-        100% 50%, 
-        65% 65%, 
-        50% 100%, 
-        35% 65%, 
-        0% 50%, 
-        35% 35%
-    );
+    clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
     background-color: #FF7E79;
 }
 
-/* Five-Point Star */
 .trail.five-point {
-    clip-path: polygon(
-        50% 0%, 
-        61% 35%, 
-        98% 35%, 
-        68% 57%, 
-        79% 91%, 
-        50% 70%, 
-        21% 91%, 
-        32% 57%, 
-        2% 35%, 
-        39% 35%
-    );
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     background-color: #4FD1C5;
 }
 
-/* Fade-Out Animation */
 @keyframes fade-out {
     from {
         opacity: 0.8;
@@ -192,7 +263,13 @@ h2 {
     }
 }
 
-/* Trail Removal After 700ms */
-.trail {
-    animation: fade-out 0.7s ease-out forwards;
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

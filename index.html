@@ -10,7 +10,8 @@
     <header>
         <nav>
             <h1>My Portfolio</h1>
-            <ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#achievements">Academic Achievements</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -20,22 +21,26 @@
         </nav>
     </header>
     <main>
-        <section id="about">
+        <section id="about" class="fade-section">
             <h2>About Me</h2>
             <div class="about-container">
+                <img src="images/myface.png" alt="Your Name" class="about-photo">
                 <p>
                     Welcome to my portfolio! I am a passionate developer with skills in web development, algorithms, and design. 
                     I love tackling complex problems and creating innovative solutions that bring ideas to life.
                 </p>
-                <img src="images/myface.png" alt="Your Name" class="about-photo">
             </div>
         </section>
 
-        <section id="achievements">
+        <section id="achievements" class="fade-section">
             <h2>Academic Achievements</h2>
             <div class="project">
                 <h3 class="project-title">Top of Class in Computer Science</h3>
                 <p class="project-details">Achieved the highest GPA in the department for three consecutive years, specializing in algorithms and software development.</p>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Bronze medal in National Mathematics Olympiad</h3>
+                <p class="project-details">idk</p>
             </div>
             <div class="project">
                 <h3 class="project-title">Published Research Paper</h3>
@@ -43,7 +48,7 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="fade-section">
             <h2>Projects</h2>
             <div class="project">
                 <h3 class="project-title">Portfolio Website</h3>
@@ -59,7 +64,7 @@
             </div>
         </section>
 
-        <section id="extracurricular">
+        <section id="extracurricular" class="fade-section">
             <h2>Extracurricular</h2>
             <div class="project">
                 <h3 class="project-title">Marathon Runner</h3>
@@ -71,7 +76,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="fade-section">
             <h2>Contact Me</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>

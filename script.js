@@ -102,3 +102,16 @@ window.addEventListener('resize', () => {
         navLinks.style.height = '0'; // Collapse for smaller screens
     }
 });
+
+// Add toggle functionality to each list item with a "toggle-title"
+document.querySelectorAll('.toggle-title').forEach((title) => {
+    title.addEventListener('click', () => {
+        const content = title.nextElementSibling;
+
+        if (content.classList.contains('visible')) {
+            content.classList.remove('visible'); // Hide the content
+        } else {
+            content.classList.add('visible'); // Show the content
+        }
+    });
+});

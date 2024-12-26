@@ -109,12 +109,17 @@ h2 {
 }
 
 /* Section Borders */
-#about {
-    border-left: 5px solid #FF7E79;
+
+#education {
+    border-left: 5px solid #f6cc91;
 }
 
-#achievements {
-    border-left: 5px solid #4FD1C5;
+#skills {
+    border-left: 5px solid #f691b3;
+}
+
+#academic {
+    border-left: 5px solid #9484eb;
 }
 
 #projects {
@@ -125,33 +130,53 @@ h2 {
     border-left: 5px solid #FFA0D8;
 }
 
-/* Project Styling */
-.project {
-    background: #F9F9F9;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #4FD1C5;
-    border-radius: 5px;
+#contact {
+    border-left: 5px solid #74FFE9;
+}
+
+/* Toggle List Styling */
+.toggle-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toggle-title {
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.3s ease;
+    font-weight: bold;
+    color: #2f7a54;
+    margin-bottom: 0.5rem;
+    display: block;
+    transition: color 0.3s ease;
 }
 
-.project:hover {
-    background: #FFE066;
-    transform: translateY(-2px);
+.toggle-title:hover {
+    color: #FFE066;
 }
 
-.project-details {
+.toggle-content {
     display: none;
     margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #E2E8F0;
     color: #2D3748;
-    font-size: 0.9rem;
-    transition: opacity 0.3s ease;
+    animation: fade-in 0.3s ease-out forwards;
 }
 
-.project-details.visible {
+.toggle-content.visible {
     display: block;
-    opacity: 1;
+}
+
+/* Fade-In Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */

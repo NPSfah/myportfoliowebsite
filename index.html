@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Napasorn Suwannakij</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>My Portfolio</h1>
+            <h1>Napasorn Suwannakij</h1>
             <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#achievements">Academic Achievements</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#academic">Academic</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#extracurricular">Extracurricular</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -23,74 +25,133 @@
     <main>
         <section id="about" class="fade-section">
             <h2>About Me</h2>
-            <div class="about-container">
-                <img src="images/myface.png" alt="Your Name" class="about-photo">
-                <p>
-                    Welcome to my portfolio! I am a passionate developer with skills in web development, algorithms, and design. 
-                    I love tackling complex problems and creating innovative solutions that bring ideas to life.
-                </p>
-            </div>
+            <img src="images/myface.png" alt="Fah" class="about-photo">
+            <p>Hello! My name is Napasorn Suwannakij, a Computer Engineering student at Chulalongkorn University. I am passionate about problem-solving, programming, and technology-driven innovation.</p>
         </section>
 
-        <section id="achievements" class="fade-section">
+        <section id="education" class="fade-section">
+            <h2>Education</h2>
+            <ul>
+                <li>Currently studying in Computer Engineering and Digital Technology Program, Faculty of Engineering, Chulalongkorn University</li>
+                <li>High School: Triam Udom Suksa School [GPAX 3.80]</li>
+            </ul>
+        </section>
+        
+        <section id="skills" class="fade-section">
+            <h2>Skills</h2>
+            <ul class="toggle-list">
+                <li>
+                    <span class="toggle-title">Programming</span>
+                    <ul class="toggle-content">
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bash</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle-title">Tools</span>
+                    <ul class="toggle-content">
+                        <li>Postman</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                        <li>Arduino</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle-title">CAD and 3D Modeling</span>
+                    <ul class="toggle-content">
+                        <li>Fusion</li>
+                        <li>Womp 3D</li>
+                        <li>Blender</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="academic" class="fade-section">
             <h2>Academic Achievements</h2>
-            <div class="project">
-                <h3 class="project-title">Top of Class in Computer Science</h3>
-                <p class="project-details">Achieved the highest GPA in the department for three consecutive years, specializing in algorithms and software development.</p>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Bronze medal in National Mathematics Olympiad</h3>
-                <p class="project-details">idk</p>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Published Research Paper</h3>
-                <p class="project-details">Published a paper on "Optimizing Graph Algorithms for Real-Time Data Processing" in an international journal.</p>
-            </div>
+            <ul class="toggle-list">
+                <li>
+                    <span class="toggle-title">POSN Camp, 1st and 2nd round</span>
+                    <div class="toggle-content">
+                        <p>Participated in competitive programming and advanced mathematics training sessions.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="toggle-title">Awards</span>
+                    <ul class="toggle-content">
+                        <li>Bronze medal in National Mathematics Competition</li>
+                        <li>Bronze medal in Kangaroo Math Competition 2020</li>
+                        <li>Nationwide Third Highest Total Score in Lower Secondary Academic Knowledge Competition</li>
+                        <li>Complimentary award for Science subject in Thailand Educational Development and Evaluation Tests</li>
+                        <li>Gold medal in Thailand English Skills Evaluation Test (TESET)</li>
+                        <li>Top 25% in Australian International Chemistry Quiz 2023</li>
+                    </ul>
+                </li>
+            </ul>
         </section>
 
         <section id="projects" class="fade-section">
             <h2>Projects</h2>
-            <div class="project">
-                <h3 class="project-title">Portfolio Website</h3>
-                <p class="project-details">Developed a responsive and interactive portfolio website showcasing my skills and projects.</p>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Cryptocurrency Arbitrage Tool</h3>
-                <p class="project-details">Built a cryptocurrency arbitrage application using Python and the Bellman-Ford algorithm for cycle detection in trading opportunities.</p>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Collaborative Whiteboard Tool</h3>
-                <p class="project-details">Designed and implemented a real-time collaborative whiteboard application using WebSocket and Node.js.</p>
-            </div>
+            <ul class="toggle-list">
+                <li>
+                    <span class="toggle-title">Hackathons</span>
+                    <ul class="toggle-content">
+                        <li>5th place in NITAD18 Hackathon</li>
+                        <li>Participated in Circular Innovation Challenge</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle-title">Arduino Projects</span>
+                    <ul class="toggle-content">
+                        <li>Morse Code Decoder</li>
+                        <li>Combination Lock</li>
+                        <li>Line Following Robot</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle-title">Python Projects</span>
+                    <ul class="toggle-content">
+                        <li>XO Game Bot</li>
+                        <li>ASCII Flappy Bird</li>
+                    </ul>
+                </li>
+            </ul>
         </section>
 
         <section id="extracurricular" class="fade-section">
             <h2>Extracurricular</h2>
-            <div class="project">
-                <h3 class="project-title">Marathon Runner</h3>
-                <p class="project-details">Completed over 10 marathons worldwide, including international events in Tokyo and New York.</p>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Volunteer Coding Instructor</h3>
-                <p class="project-details">Taught basic programming and web development to underprivileged students at a local community center.</p>
-            </div>
+            <ul class="toggle-list">
+                <li>
+                    <span class="toggle-title">Academic Team Member</span>
+                    <div class="toggle-content">
+                        <p>Worked in the academic team for a mock admission exam hosted by the Faculty of Engineering.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="toggle-title">CP Job Fair Staff</span>
+                    <div class="toggle-content">
+                        <p>Assisted with organizing and managing the CP Job Fair.</p>
+                    </div>
+                </li>
+            </ul>
         </section>
 
         <section id="contact" class="fade-section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a href="mailto:napasorn.swk@gmail.com">napasorn.swk@gmail.com</a></li>
+                <li>Phone: 090-887-8753</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/napasorn-suwannakij" target="_blank">napasorn-suwannakij</a></li>
+                <li>GitHub: <a href="https://github.com/NPSfah" target="_blank">NPSfah</a></li>
+            </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
